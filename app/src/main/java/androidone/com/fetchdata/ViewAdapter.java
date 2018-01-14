@@ -37,8 +37,8 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-        holder.movieName.setText(movielist.get(position).getMovieName());
-        holder.releaseDate.setText(movielist.get(position).getReleaseDate());
+      //  holder.movieName.setText(movielist.get(position).getMovieName());
+      //  holder.releaseDate.setText(movielist.get(position).getReleaseDate());
         if(! movielist.get(position).getMoviePoster().isEmpty())
         {
             Picasso.with(context).load(movielist.get(position).getMoviePoster()).fit().centerCrop().into(holder.moviePoster);
@@ -64,8 +64,8 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
             moviePoster = (ImageView)itemView.findViewById(R.id.image_icon);
-            releaseDate = (TextView)itemView.findViewById(R.id.releasedate);
-            movieName = (TextView)itemView.findViewById(R.id.moviename);
+           // releaseDate = (TextView)itemView.findViewById(R.id.releasedate);
+           // movieName = (TextView)itemView.findViewById(R.id.moviename);
             container=itemView;
         }
 
