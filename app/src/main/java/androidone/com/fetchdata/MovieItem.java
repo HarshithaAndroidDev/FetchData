@@ -55,6 +55,17 @@ public class MovieItem {
         return description;
     }
 
+    public String getVoteAverage() {
+        return voteAverage;
+    }
+
+    public void setVoteAverage(String voteAverage) {
+        this.voteAverage = voteAverage;
+    }
+
+    @SerializedName("vote_average")
+    private String voteAverage;
+
     public void setDescription(String description) {
         this.description = description;
     }

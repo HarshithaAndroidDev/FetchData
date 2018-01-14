@@ -52,9 +52,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:text="Brindavanam"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/releasedate"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/voteAverage"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Brindavanam"
                         android:textSize="14sp"
                         android:gravity="center"
-                        android:layout_below="@+id/releasedate"
+                        android:layout_below="@+id/voteAverage"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
                         android:id="@+id/description"/>

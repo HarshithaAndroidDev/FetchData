@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements ViewAdapter.Itemc
             movieItem.setMovieName(JsonUtil.getJsonString(currentObject,"title"));
             movieItem.setReleaseDate(JsonUtil.getJsonString(currentObject,"release_date"));
             movieItem.setMoviePoster("https://image.tmdb.org/t/p/w500/"+ JsonUtil.getJsonString(currentObject,"poster_path"));
+            movieItem.setVoteAverage(JsonUtil.getJsonString(currentObject,"vote_average"));
             movieItems.add(movieItem);
         }
         viewAdapter.notifyDataSetChanged();

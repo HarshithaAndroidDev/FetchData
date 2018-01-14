@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONObject;
 
 public class MovieDescriptionActivity extends AppCompatActivity {
-    private TextView releaseDate,Description,MovieName;
+    private TextView releaseDate,Description,MovieName,voteAverage;
     private ImageView poster;
     private Gson gson;
     private String MovieID;
@@ -27,6 +27,7 @@ public class MovieDescriptionActivity extends AppCompatActivity {
         MovieID =getIntent().getStringExtra(MOVIE_ID);
         releaseDate=(TextView)findViewById(R.id.releasedate);
         Description=(TextView)findViewById(R.id.description);
+        voteAverage=(TextView)findViewById(R.id.voteAverage);
         MovieName=(TextView)findViewById(R.id.TitleName);
         poster=(ImageView) findViewById(R.id.poster_name);
         gson = new Gson();
@@ -54,6 +55,7 @@ public class MovieDescriptionActivity extends AppCompatActivity {
        MovieItem movieItem = gson.fromJson(results.toString(),MovieItem.class);
         releaseDate.setText(movieItem.getReleaseDate());
         Description.setText(movieItem.getDescription());
+        voteAverage.setText(movieItem.getVoteAverage());
         MovieName.setText(movieItem.getMovieName());
         Picasso.with(this).load("https://image.tmdb.org/t/p/w500/"+movieItem.getMoviePoster()).error(R.drawable.movieimage).placeholder(R.drawable.movieimage).into(poster);
 
