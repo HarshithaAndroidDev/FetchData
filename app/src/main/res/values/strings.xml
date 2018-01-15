@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">FetchData</string>
+    <string name="app_name">Popular Movies</string>
+    <string-array name="sort_types">
+        <item>---Sort By---</item>
+        <item>Most-Popular</item>
+        <item>Highest-rated</item>
+    </string-array>
+    <string name="textonButton">Apply Filter</string>
 </resources>
